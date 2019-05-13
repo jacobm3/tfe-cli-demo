@@ -1,10 +1,9 @@
 terraform {
   backend "remote" {
-    hostname = "ptfe-demo.jacobm.hashidemos.io"
-    organization = "demo-org"
-
+    hostname = "app.terraform.io"
+    organization = "jacobm3"
     workspaces {
-      name = "cli-workspace"
+      name = "tfe-cli-demo"
     }
   }
 }
