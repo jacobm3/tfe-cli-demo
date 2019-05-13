@@ -10,5 +10,6 @@ tfe pushvars -dry-run false -overwrite-all true -name ${ORG}/${WS} \
  -var "team=internal_qa" \
  -svar "secret=123456" \
  -env-var "AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}" \
- -senv-var "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}"
+ -senv-var "AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}" \
+ -env-var "CONFIRM_DESTROY=1"
 

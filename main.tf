@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "b" {
-  bucket = "jmartinson-d41d8cd98f00b204e00998ecf8427e"
+  bucket = "jmartinson-demo-bucket"
   acl    = "private"
 
   tags = {
