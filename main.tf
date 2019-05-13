@@ -2,14 +2,11 @@ provider "aws" {
   region = "us-east-1"
 }
 
-resource "aws_instance" "example" {
-  ami          = "ami-2757f631"
-  instance_type = "t2.small"
-  count        = 1
+resource "aws_s3_bucket" "b" {
+  bucket = "jmartinson-d41d8cd98f00b204e00998ecf8427e"
+  acl    = "private"
 
-  tags {
-    "owner" = "jacobm"
-    "Name" = "dev-demo-instance"
-    "asdf" = 72
+  tags = {
+    owner = "jmartinson@hashicorp.com"
   }
 }
