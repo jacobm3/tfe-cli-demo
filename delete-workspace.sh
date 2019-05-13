@@ -1,5 +1,3 @@
-. .terraform.env
-
 ORG=jacobm3
 WS=cli-demo
 

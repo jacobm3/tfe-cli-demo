@@ -1,11 +1,8 @@
-# specify AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY in this file
-. .terraform.env
+HOST=app.terraform.io
+ORG=jacobm3
+WS=tfe-cli-demo
 
-HOST=ptfe-demo.jacobm.hashidemos.io
-ORG=demo-org
-WS=cli-workspace
-
-tfe workspace create -tfe-address $HOST -tfe-org $ORG -tfe-workspace $WS 
+#tfe workspace create -tfe-address $HOST -tfe-org $ORG -tfe-workspace $WS 
 
 tfe pushvars -dry-run false -overwrite-all true -name ${ORG}/${WS} \
  -tfe-address $HOST \
